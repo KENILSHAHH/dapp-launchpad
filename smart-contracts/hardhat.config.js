@@ -6,60 +6,60 @@ dotenv.config({ path: "./.env" });
 
 /** @type import('hardhat/config').HardhatUserConfig */
 const config = {
-  solidity: "0.8.21",
+  solidity: '0.8.21',
   networks: {
     hardhat: {
-      loggingEnabled: false
+      loggingEnabled: false,
     },
     ethereum: {
       chainId: 1,
-      url: "https://rpc.ankr.com/eth",
+      url: 'https://rpc.ankr.com/eth',
       forking: {
-        url: "https://rpc.ankr.com/eth"
+        url: 'https://rpc.ankr.com/eth',
       },
-      accounts: [process.env.PRIVATE_KEY_DEPLOYER]
+      accounts: [process.env.PRIVATE_KEY_DEPLOYER],
     },
-    goerli: {
-      chainId: 5,
-      url: "https://rpc.ankr.com/eth_goerli",
+    sepolia: {
+      chainId: 11155111,
+      url: 'https://sepolia.infura.io/v3/',
       forking: {
-        url: "https://rpc.ankr.com/eth_goerli"
+        url: 'https://sepolia.infura.io/v3/',
       },
-      accounts: [process.env.PRIVATE_KEY_DEPLOYER]
+      accounts: [process.env.PRIVATE_KEY_DEPLOYER],
     },
     polygonPos: {
       chainId: 137,
-      url: "https://rpc.ankr.com/polygon",
+      url: 'https://rpc.ankr.com/polygon',
       forking: {
-        url: "https://rpc.ankr.com/polygon"
+        url: 'https://rpc.ankr.com/polygon',
       },
-      accounts: [process.env.PRIVATE_KEY_DEPLOYER]
+      accounts: [process.env.PRIVATE_KEY_DEPLOYER],
     },
-    polygonMumbai: {
-      chainId: 80001,
-      url: "https://rpc.ankr.com/polygon_mumbai",
+    polygonAmoy: {
+      chainId: 80002,
+      url: 'https://rpc-amoy.polygon.technology/',
       forking: {
-        url: "https://rpc.ankr.com/polygon_mumbai"
+        url: 'https://rpc-amoy.polygon.technology/',
       },
-      accounts: [process.env.PRIVATE_KEY_DEPLOYER]
+      accounts: [process.env.PRIVATE_KEY_DEPLOYER],
     },
     polygonZkevm: {
       chainId: 1101,
-      url: "https://rpc.ankr.com/polygon_zkevm",
+      url: 'https://rpc.ankr.com/polygon_zkevm',
       forking: {
-        url: "https://rpc.ankr.com/polygon_zkevm"
+        url: 'https://rpc.ankr.com/polygon_zkevm',
       },
-      accounts: [process.env.PRIVATE_KEY_DEPLOYER]
+      accounts: [process.env.PRIVATE_KEY_DEPLOYER],
     },
     polygonZkevmTestnet: {
-      chainId: 1442,
-      url: "https://rpc.public.zkevm-test.net",
+      chainId: 2442,
+      url: 'https://rpc.cardona.zkevm-rpc.com',
       forking: {
-        url: "https://rpc.public.zkevm-test.net"
+        url: 'https://rpc.cardona.zkevm-rpc.com',
       },
-      accounts: [process.env.PRIVATE_KEY_DEPLOYER]
-    }
-  }
+      accounts: [process.env.PRIVATE_KEY_DEPLOYER],
+    },
+  },
 };
 
 module.exports = config;
